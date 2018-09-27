@@ -2,7 +2,7 @@
 .DS_Store
 Desktop.ini
 
-# Thumbnail cache files
+# Thumbnsil cache files
 ._*
 Thumbs.db
 
@@ -10,5 +10,20 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# Misc files
+# Compiled Python files
+*.pyc
+
+# Application specific files
+venv
+node_modules
+.sass-cache
+
+# Compiled Java Files
+*.class
+
+# Eclipse project settings files
+.settings
+.project
+
+# Misc iles
 .swp
