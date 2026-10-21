@@ -1,0 +1,29 @@
+# ~/.gitconfig
+
+# Default or shared fallback configs
+[init]
+	defaultBranch = main
+[user]
+	name = <Firstname> <Lastname>
+	email = <firstname>.<lastname>@preferedmail.com
+	useConfigOnly = true
+[core]
+	editor = code --wait
+	autocrlf = input
+	filemode = false
+	excludesfile = ~/.gitignore_global
+[credential]
+	helper = manager
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+# Dynamically swap profiles based on repository location
+[includeIf "gitdir:~/workspace/personal/"]
+	path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/workspace/work/"]
+	path = ~/.gitconfig-work

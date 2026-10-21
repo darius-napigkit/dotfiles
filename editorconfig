@@ -1,0 +1,30 @@
+# Top-most EditorConfig file
+root = true
+
+# Global defaults for all files
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Web Development: Frontend languages default to 2 spaces
+[*.{js,jsx,ts,tsx,html,css,scss,less,json,yaml,yml}]
+indent_style = space
+indent_size = 2
+
+# Systems & Scripting (Python, Shell scripts, Vim configuration)
+[*.{py,sh,bash,zsh,vim}]
+indent_style = space
+indent_size = 4
+
+# Native macOS & Windows configuration scripts (Makefiles require actual tabs)
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+# Markdown files (Trailing whitespace is meaningful for line breaks in Markdown)
+[*.md]
+trim_trailing_whitespace = false

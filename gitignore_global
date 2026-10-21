@@ -1,0 +1,238 @@
+# Global GitIgnore File
+
+# ==============================================================================
+# SECRETS & OS (CRITICAL)
+# ==============================================================================
+# Never commit credentials, tokens, or environment files
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Windows ###
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+### Linux ###
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+### Environment / secrets ###
+*.pem
+*.tfvars
+*.tfvars.json
+*.env
+*.env.*
+.env
+.env.local
+.env.*.local
+
+
+# ==============================================================================
+# IDE SETTINGS
+# ==============================================================================
+
+### JetBrains IDEs (IntelliJ, WebStorm, PyCharm, GoLand, etc.) ###
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+### VS Code ###
+.vscode/
+*.code-workspace
+.history/
+
+### Sublime Text ###
+*.sublime-workspace
+*.sublime-project
+
+### Vim ###
+*.swp
+*.swo
+*.swn
+Session.vim
+.netrwhist
+tags
+
+### Emacs ###
+*~
+\#*\#
+.\#*
+
+### Xcode ###
+*.xcuserstate
+xcuserdata/
+DerivedData/
+
+### Visual Studio ###
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+
+# ==============================================================================
+# INFRASTRUCTURE AS CODE (IaC) & CLOUD
+# ==============================================================================
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+# Not typical but if preferred to pin version(s) and for security purposes:
+#.terraform.lock.hcl
+
+# --- Terragrunt ---
+.terragrunt-cache/
+terragrunt-debug.tfvars
+
+# --- Ansible ---
+*.retry
+.ansible_cache
+ancestry.json
+
+# --- Azure & Bicep ---
+.azure/
+*.bicep.log
+# If compiling Bicep to ARM JSON locally:
+# *.json (Be careful if there are config JSONs; better to ignore specific outputs)
+
+# --- Pulumi ---
+.pulumi/
+# Pulumi state is usually managed via SaaS, but if local:
+#.pulumi/credentials.json
+
+
+# ==============================================================================
+# BACKEND LANGUAGES
+# ==============================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.profile
+.poetry/
+.pytest_cache/
+.mypy_cache/
+
+# --- Go ---
+# Binaries and templates
+bin/
+pkg/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# --- Java (Maven / Gradle) ---
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+pom.xml.note
+release.properties
+
+# Gradle
+.gradle/
+build/
+
+# --- .NET (C# / F#) ---
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+
+# ==============================================================================
+# FRONTEND LANGUAGES & RUNTIMES
+# ==============================================================================
+
+# --- TypeScript / React / Node.js ---
+node_modules/
+/npm-debug.log*
+/yarn-error.log*
+/yarn-debug.log*
+.pnpm-debug.log*
+
+# Static build outputs
+build/
+dist/
+.next/
+out/
+.docusaurus/
+.cache/
+*.tsbuildinfo
+
+### Node ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+
+# ==============================================================================
+# MISCELLANEOUS
+# ==============================================================================
+
+### Logs ###
+*.log
+logs/
+
+### Editor backups ###
+*.bak
+*.tmp
+*.temp
+*.orig
